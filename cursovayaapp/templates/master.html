@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="nojs html css_verticalspacer" lang="ru-RU">
+ <head>
+
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="2018.1.0.386"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>master</title>
+  <link rel="stylesheet" type="text/css" href="static/css/site_global.css?crc=444006867"/>
+  <link rel="stylesheet" type="text/css" href="static/css/master.css?crc=4076480111" id="pagesheet"/>
+
+ </head>
+ <body>
+
+  <div class="clearfix borderbox" id="page">
+   <div class="browser_width" id="u1478-bw">
+    <div id="u1478"></div>
+   </div>
+   <a class="nonblock nontext clearfix grpelem" id="u1484-4" href="/"><p>На главную</p></a>
+   <div class="clearfix grpelem" id="ppu1481-4">
+    <div class="clearfix colelem" id="pu1481-4">
+     <a class="nonblock nontext clearfix grpelem" id="u1481-4" href="service.html"><p>Услуги</p></a>
+     <a class="nonblock nontext clearfix grpelem" id="u1482-4" href="review.html"><p>Отзывы</p></a>
+    </div>
+
+    {% for order in o_master %}
+    {% if order.status == "В работе" %}
+    {% include 'master_one.html' %}
+    {% endif %}
+    {% endfor %}
+
+   </div>
+   <div id="u1480-4-wrapper">
+    <div class="clearfix" id="u1480-4">
+     <p id="u1480-2">г. Екатеринбург ул. Заводская 38</p>
+    </div>
+   </div>
+   <a class="nonblock nontext clearfix grpelem" id="u1483-4" href="enter.html"><p>Выход</p></a>
+   <div class="verticalspacer" data-offset-top="138" data-content-above-spacer="138" data-content-below-spacer="361" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
+   </div>
+   </body>
+</html>

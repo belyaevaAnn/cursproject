@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="nojs html css_verticalspacer" lang="ru-RU">
+ <head>
+
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="2018.1.0.386"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>enter</title>
+  <link rel="stylesheet" type="text/css" href="static/css/site_global.css?crc=444006867"/>
+  <link rel="stylesheet" type="text/css" href="static/css/enter.css?crc=151049297" id="pagesheet"/>
+
+ </head>
+ <body>
+
+  <div class="clearfix borderbox" id="page">
+   <div class="browser_width" id="u1328-bw">
+    <div id="u1328"></div>
+   </div>
+   <a class="nonblock nontext clearfix grpelem" id="u1334-4" href="/"><p>На главную</p></a>
+   <div class="clearfix grpelem" id="ppu1331-4">
+    <div class="clearfix colelem" id="pu1331-4">
+     <a class="nonblock nontext clearfix grpelem" id="u1331-4" href="service.html"><p>Услуги</p></a>
+     <a class="nonblock nontext clearfix grpelem" id="u1332-4" href="review.html"><p>Отзывы</p></a>
+    </div>
+    <div class="clearfix colelem" id="u1381-4">
+     <p>Вход только для сотрудников</p>
+    </div>
+    <div class="rounded-corners clearfix colelem" id="u1361">
+     <form method="post" action="" name="login_user">
+      {% csrf_token %}
+      <div class="clearfix colelem" id="u1362-4">
+      <p>Введите логин:</p>
+       <input type="text" name="enter_login" >
+      </div>
+      <div class="clearfix colelem" id="u1364-4">
+      <p>Введите пароль:</p>
+       <input type="password" name="enter_pass">
+      </div>
+      <div class="clearfix colelem" id="u1364-4">
+       <input type="submit" value="Войти">
+      </div>
+     </form>
+     <p style="font-family: '__Bodoni Classic_5'; color: #8B2C23; font-size: 20px; margin-top: 60px">{{ message }}</p>
+    </div>
+   </div>
+   <div id="u1330-4-wrapper">
+    <div class="clearfix" id="u1330-4">
+     <p id="u1330-2">г. Екатеринбург ул. Заводская 38</p>
+    </div>
+   </div>
+   <a class="nonblock nontext MuseLinkActive clearfix grpelem" id="u1333-4" href="enter.html"><p>Вход</p></a>
+   <div class="verticalspacer" data-offset-top="229" data-content-above-spacer="229" data-content-below-spacer="270" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
+   </div>
+   </body>
+</html>

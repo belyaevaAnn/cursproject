@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="nojs html css_verticalspacer" lang="ru-RU">
+ <head>
+
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="2018.1.0.386"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>admin</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/site_global.css?crc=444006867"/>
+  <link rel="stylesheet" type="text/css" href="../static/css/admin.css?crc=126276031" id="pagesheet"/>
+
+ </head>
+ <body>
+
+  <div class="clearfix borderbox" id="page">
+   <div class="browser_width" id="u1666-bw">
+    <div id="u1666"></div>
+   </div>
+   <div class="clearfix grpelem" id="ppu1672-4">
+    <div class="clearfix colelem" id="pu1672-4">
+     <a class="nonblock nontext clearfix grpelem" id="u1672-4" href="index.html"><p>На главную</p></a>
+    </div>
+
+    <div class="clearfix colelem" id="u1774-4">
+     <a id="u1774-2" href="admin.html">Все заказы</a>
+    </div>
+    {% for master in masters %}
+    <div class="clearfix colelem" id="u1774-4">
+     <a id="u1774-2" href="/{{ master.id }}">{{ master.name }}</a>
+    </div>
+    {% endfor %}
+
+   </div>
+   <div class="clearfix grpelem" id="ppu1669-4">
+    <div class="clearfix colelem" id="pu1669-4">
+     <a class="nonblock nontext clearfix grpelem" id="u1669-4" href="service.html"><p>Услуги</p></a>
+     <a class="nonblock nontext clearfix grpelem" id="u1670-4" href="review.html"><p>Отзывы</p></a>
+     <a class="nonblock nontext clearfix grpelem" id="u1713-4" href="order.html"><p>Добавить заказ</p></a>
+    </div>
+
+     <div class="clearfix colelem" id="u1768">
+        <div class="clearfix grpelem" id="u1740-4">
+         <p>№</p>
+        </div>
+        <div class="clearfix grpelem" id="u1739-4">
+         <p>Клиент</p>
+        </div>
+        <div class="clearfix grpelem" id="u1741-4">
+         <p>Дата</p>
+        </div>
+     <div class="clearfix grpelem" id="u1765-4">
+      <p>Мастер</p>
+     </div>
+    </div>
+
+    {% for order in o_today %}
+    {% include "admin_one.html" %}
+    {% endfor %}
+
+   </div>
+   <div id="u1668-4-wrapper">
+    <div class="clearfix" id="u1668-4">
+     <p id="u1668-2">г. Екатеринбург ул. Заводская 38</p>
+    </div>
+   </div>
+   <a class="nonblock nontext clearfix grpelem" id="u1671-4" href="enter.html"><p>Выход</p></a>
+   <div class="verticalspacer" data-offset-top="171" data-content-above-spacer="171" data-content-below-spacer="328" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
+  </div>
+
+   </body>
+</html>

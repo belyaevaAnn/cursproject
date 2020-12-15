@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="nojs html css_verticalspacer" lang="ru-RU">
+ <head>
+
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="2018.1.0.386"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>material</title>
+  <link rel="stylesheet" type="text/css" href="static/css/site_global.css?crc=444006867"/>
+  <link rel="stylesheet" type="text/css" href="static/css/material.css?crc=3760847978" id="pagesheet"/>
+
+ </head>
+ <body>
+
+  <div class="clearfix borderbox" id="page">
+   <div class="clearfix grpelem" id="pu687">
+    <div class="browser_width" id="u687-bw">
+     <div id="u687"></div>
+    </div>
+    <div id="u689-4-wrapper">
+     <div class="clearfix" id="u689-4">
+      <p id="u689-2">г. Екатеринбург ул. Заводская 38</p>
+     </div>
+    </div>
+   </div>
+   <div class="clearfix grpelem" id="ppu693-4">
+    <div class="clearfix colelem" id="pu693-4">
+     <a class="nonblock nontext clearfix grpelem" id="u693-4" href="/"><p>На главную</p></a>
+     <a class="nonblock nontext clearfix grpelem" id="u690-4" href="service.html"><p>Услуги</p></a>
+     <a class="nonblock nontext clearfix grpelem" id="u691-4" href="review.html"><p>Отзывы</p></a>
+    </div>
+
+    {% for material in materials %}
+    {% include 'material_one.html' %}
+    {% endfor %}
+
+   </div>
+   <a class="nonblock nontext clearfix grpelem" id="u692-4" href="enter.html"><p>Вход</p></a>
+   <div class="verticalspacer" data-offset-top="166" data-content-above-spacer="166" data-content-below-spacer="334" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
+   </div>
+   </body>
+</html>

@@ -1,0 +1,21 @@
+ <div class="clearfix colelem" id="u1768">
+     <div class="clearfix grpelem" id="u1735">
+      <div class="clearfix grpelem" id="u1737">
+       <div class="clearfix grpelem" id="u1738">
+        <div class="clearfix grpelem" id="u1740-4">
+         <p>{{ order.id }}</p>
+        </div>
+        <div class="clearfix grpelem" id="u1739-4">
+         <p>{{ order.customer_name }}</p>
+        </div>
+        <div class="clearfix grpelem" id="u1741-4">
+         <p>{{ order.time|date:"d.m.Y" }}</p>
+        </div>
+       </div>
+      </div>
+      <a class="nonblock nontext museBGSize grpelem" id="u1736" href="edit_order.html/{{ order.id }}"></a>
+     </div>
+     <div class="clearfix grpelem" id="u1765-4">
+      <p>{{ order.master_id.name }}</p>
+     </div>
+    </div>

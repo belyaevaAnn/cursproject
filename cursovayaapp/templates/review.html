@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="nojs html css_verticalspacer" lang="ru-RU">
+ <head>
+
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="2018.1.0.386"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>review</title>
+  <link rel="stylesheet" type="text/css" href="static/css/site_global.css?crc=444006867"/>
+  <link rel="stylesheet" type="text/css" href="static/css/review.css?crc=3940538829" id="pagesheet"/>
+
+ </head>
+ <body>
+
+  <div class="clearfix borderbox" id="page">
+   <div class="browser_width" id="u821-bw">
+    <div id="u821"></div>
+   </div>
+   <a class="nonblock nontext clearfix grpelem" id="u827-4" href="/"><p>На главную</p></a>
+   <div class="clearfix grpelem" id="ppu822-4">
+    <div class="clearfix colelem" id="pu822-4">
+     <a class="nonblock nontext clearfix grpelem" id="u824-4" href="service.html"><p>Услуги</p></a>
+     <a class="nonblock nontext MuseLinkActive clearfix grpelem" id="u825-4" href="review.html"><p>Отзывы</p></a>
+    </div>
+    <a class="nonblock nontext clearfix colelem" id="u850-4" href="form_review.html"><!-- content --><p id="u850-2">Оставить отзыв</p></a>
+
+    {% for review in reviews %}
+    {% include 'review_one.html' %}
+    {% endfor %}
+
+   </div>
+   <div id="u823-4-wrapper">
+    <div class="clearfix" id="u823-4">
+     <p id="u823-2">г. Екатеринбург ул. Заводская 38</p>
+    </div>
+   </div>
+   <a class="nonblock nontext clearfix grpelem" id="u826-4" href="enter.html"><p>Вход</p></a>
+   <div class="verticalspacer" data-offset-top="215" data-content-above-spacer="215" data-content-below-spacer="284" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
+  </div>
+
+
+   </body>
+</html>

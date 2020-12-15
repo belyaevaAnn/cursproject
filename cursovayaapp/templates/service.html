@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="nojs html css_verticalspacer" lang="ru-RU">
+ <head>
+
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="2018.1.0.386"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>service</title>
+  <link rel="stylesheet" type="text/css" href="static/css/site_global.css?crc=444006867"/>
+  <link rel="stylesheet" type="text/css" href="static/css/service.css?crc=371183757" id="pagesheet"/>
+
+ </head>
+ <body>
+
+  <div class="clearfix borderbox" id="page">
+   <div class="clearfix grpelem" id="pu712">
+    <div class="browser_width" id="u712-bw">
+     <div id="u712"></div>
+    </div>
+    <div id="u714-4-wrapper">
+     <div class="clearfix" id="u714-4">
+      <p id="u714-2">г. Екатеринбург ул. Заводская 38</p>
+     </div>
+    </div>
+   </div>
+   <div class="clearfix grpelem" id="ppu718-4">
+    <div class="clearfix colelem" id="pu718-4">
+     <a class="nonblock nontext clearfix grpelem" id="u718-4" href="/"><p>На главную</p></a>
+     <a class="nonblock nontext MuseLinkActive clearfix grpelem" id="u715-4" href="service.html"><p>Услуги</p></a>
+     <a class="nonblock nontext clearfix grpelem" id="u716-4" href="review.html"><p>Отзывы</p></a>
+    </div>
+    <div class="clearfix colelem" id="u587-4">
+     <p>Пошив</p>
+    </div>
+    {% for service in services %}
+     {% if service.type == 0 %}
+      {% include 'service_one.html' %}
+     {% endif %}
+    {% endfor %}
+   </div>
+   <div class="clearfix grpelem" id="pu717-4">
+    <a class="nonblock nontext clearfix colelem" id="u717-4" href="enter.html"><p>Вход</p></a>
+    <div class="clearfix colelem" id="u602-4">
+     <p>Ремонт</p>
+    </div>
+
+    {% for service in services %}
+     {% if service.type == 1 %}
+      {% include 'service_one.html' %}
+     {% endif %}
+    {% endfor %}
+
+   </div>
+   <div class="verticalspacer" data-offset-top="155" data-content-above-spacer="155" data-content-below-spacer="345" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
+   </div>
+   </body>
+</html>

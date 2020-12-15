@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="nojs html css_verticalspacer" lang="ru-RU">
+ <head>
+
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="2018.1.0.386"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>form_review</title>
+  <link rel="stylesheet" type="text/css" href="static/css/site_global.css?crc=444006867"/>
+  <link rel="stylesheet" type="text/css" href="static/css/form_review.css?crc=3956876500" id="pagesheet"/>
+
+ </head>
+ <body>
+
+  <div class="clearfix borderbox" id="page">
+   <div class="browser_width" id="u953-bw">
+    <div id="u953"></div>
+   </div>
+   <a class="nonblock nontext clearfix grpelem" id="u959-4" href="/"><p>На главную</p></a>
+   <div class="clearfix grpelem" id="ppu956-4">
+    <div class="clearfix colelem" id="pu956-4">
+     <a class="nonblock nontext clearfix grpelem" id="u956-4" href="service.html"><p>Услуги</p></a>
+     <a class="nonblock nontext clearfix grpelem" id="u957-4" href="review.html"><p>Отзывы</p></a>
+    </div>
+    <div class="rounded-corners clearfix colelem" id="u1253">
+     <form action="" name="review" method="post">
+      {% csrf_token %}
+     <div class="clearfix colelem" id="u1244-4">
+      <p>Введите имя:</p>
+      <input type="text" name="review_name" class="input-style" placeholder="{{ message_name }}">
+     </div>
+     <div class="clearfix colelem" id="u1250-4">
+      <p>Введите email-адресс:</p>
+      <input type="email" name="review_email" class="input-style" placeholder="{{ message_email }}">
+     </div>
+     <div class="clearfix colelem" id="u1247-4">
+      <p>Введите текст отзыва:</p>
+      <textarea name="review_text" class="input-style re-text" placeholder="{{ message_desc }}"></textarea>
+     </div>
+     <div class="clearfix colelem" id="u1247-4">
+     <input type="submit" value="Отправить">
+     </div>
+      </form>
+    </div>
+   </div>
+   <div id="u955-4-wrapper">
+    <div class="clearfix" id="u955-4">
+     <p id="u955-2">г. Екатеринбург ул. Заводская 38</p>
+    </div>
+   </div>
+   <a class="nonblock nontext clearfix grpelem" id="u958-4" href="enter.html"><p>Вход</p></a>
+   <div class="verticalspacer" data-offset-top="207" data-content-above-spacer="207" data-content-below-spacer="293" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
+   </div>
+   </body>
+</html>

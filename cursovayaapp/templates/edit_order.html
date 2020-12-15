@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="nojs html css_verticalspacer" lang="ru-RU">
+ <head>
+
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="2018.1.0.386"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>order</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/site_global.css?crc=444006867"/>
+  <link rel="stylesheet" type="text/css" href="../static/css/order.css?crc=3794871221" id="pagesheet"/>
+
+ </head>
+ <body>
+
+  <div class="clearfix borderbox" id="page">
+   <div class="browser_width" id="u1863-bw">
+    <div id="u1863"></div>
+   </div>
+   <a class="nonblock nontext clearfix grpelem" id="u1869-4" href="/"><p>На главную</p></a>
+   <div class="clearfix grpelem" id="ppu1864-4">
+    <div class="clearfix colelem" id="pu1864-4">
+     <a class="nonblock nontext clearfix grpelem" id="u1866-4" href="../service.html"><p>Услуги</p></a>
+     <a class="nonblock nontext clearfix grpelem" id="u1867-4" href="../review.html"><p>Отзывы</p></a>
+     <a class="nonblock nontext clearfix grpelem" id="u1870-4" href="../back"><p>Назад</p></a>
+    </div>
+    <div class="clearfix colelem" id="u2094">
+     <div class="rounded-corners clearfix grpelem" id="u1915">
+      <form id="or-form" action="" method="post">
+       {% csrf_token %}
+      <div class="clearfix colelem" id="pu1916-4">
+       <div class="clearfix grpelem" id="u1916-4">
+        <p>Имя заказчика:</p>
+        <input type="text" name="order_name" placeholder="{{ message_name }}" value="{{ order.customer_name }}">
+       </div>
+       <div class="clearfix grpelem" id="u1945-4">
+        <p>Статус выполнения:</p>
+        <select name="order_status" form="or-form">
+         {% for stat in status %}
+            {% if stat == order.status %}
+            <option value="{{ stat }}" selected>{{ stat }}</option>
+            {% else %}
+            <option value="{{ stat }}">{{ stat }}</option>
+            {% endif %}
+         {% endfor %}
+        </select>
+       </div>
+      </div>
+      <div class="clearfix colelem" id="pu1918-4">
+       <div class="clearfix grpelem" id="u1918-4">
+        <p>Номер телефона заказчика:</p>
+        <input type="tel" name="order_telephone" value="{{ order.customer_number }}">
+       </div>
+       <div class="clearfix grpelem" id="u1927-4">
+        <p>Дата выполнения:</p>
+        <input type="date" name="order_date" value="{{ order.time|date:'Y-m-d' }}">
+       </div>
+      </div>
+      <div class="clearfix colelem" id="u1917-4">
+       <p>Мастер:</p>
+       <select name="order_master" form="or-form">
+        {% for master in masters %}
+           {% if master == order.master_id %}
+            <option value="{{ master.id }}" selected>{{ master.name }}</option>
+           {% else %}
+            <option value="{{ master.id }}">{{ master.name }}</option>
+           {% endif %}
+        {% endfor %}
+       </select>
+      </div>
+      <div class="clearfix colelem" id="pu1930-4">
+       <div class="clearfix grpelem" id="u1930-4">
+        <p>Услуги:</p>
+       </div>
+
+      </div>
+      <div class="clearfix colelem" id="pu1998-4">
+
+       <div class="clearfix grpelem" id="u1998-4">
+        <select name="order_services" form="or-form" multiple>
+         {% for service in services %}
+            {% if service in order.service_id.all %}
+                <option value="{{ service.id }}" selected>{{ service.name }}</option>
+            {% else %}
+                <option value="{{ service.id }}">{{ service.name }}</option>
+            {% endif %}
+         {% endfor %}
+        </select>
+       </div>
+
+      </div>
+
+      <div class="clearfix colelem" id="u1939-4">
+       <p>Описание заказа:</p>
+       <textarea name="order_text" class="re-text"> {{ order.description }} </textarea>
+      </div>
+      <div class="clearfix colelem" id="u2091">
+       <div class="clearfix grpelem" id="u2088-4">
+        <p>Итого:</p>
+       </div>
+       <div class="clearfix grpelem" id="u2082-4">
+        <input type="number" name="order_cost" class="metr-inp" maxlength="3" value="{{ order.price }}">
+       </div>
+       <div class="clearfix grpelem" id="u2083-4">
+        <p>р.</p>
+       </div>
+      </div>
+        <div class="clearfix colelem" id="u1939-4">
+       <input type="submit" value="Сохранить">
+       </div>
+      </form>
+     </div>
+    </div>
+   </div>
+   <div id="u1865-4-wrapper">
+    <div class="clearfix" id="u1865-4">
+     <p id="u1865-2">г. Екатеринбург ул. Заводская 38</p>
+    </div>
+   </div>
+   <a class="nonblock nontext clearfix grpelem" id="u1868-4" href="enter.html"><p>Выход</p></a>
+   <div class="verticalspacer" data-offset-top="421" data-content-above-spacer="397" data-content-below-spacer="78" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
+   </div>
+
+   </body>
+</html>

@@ -1,0 +1,20 @@
+
+<div class="clearfix colelem" id="u1720">
+     <div class="clearfix grpelem" id="u1540">
+      <div class="clearfix grpelem" id="u1507">
+       <div class="clearfix grpelem" id="u1510-4">
+        <p> {{ order.id }} </p>
+       </div>
+       <div class="clearfix grpelem" id="u1513-4">
+           {% for service in order.service_id.all %}
+            <p>{{ service.name }}</p>
+           {% endfor %}
+       </div>
+       <div class="clearfix grpelem" id="u1519-4">
+        <p>{{ order.time|date:"d.m.Y" }}</p>
+       </div>
+      </div>
+     </div>
+     <a class="nonblock nontext museBGSize grpelem" id="u1564" href="edit_order.html/{{ order.id }}"></a>
+    </div>
+
